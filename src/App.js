@@ -1,22 +1,18 @@
 import React from 'react';
 import './App.css';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <>
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-sm headbar">
-          <h3>Clicky Game</h3>
-        </div>
-        <div className="col-sm headbar">
-          <h3>Click an image to begin!</h3>
-        </div>
-        <div className="col-sm headbar">
-          <h3>Score: 0 | Top Score: 0</h3>
-        </div>
-      </div>
-    </div>
+    {/* navbar location that includes the game reset link to the title, and the score that updates with each click and shows the high score */}
+    <Nav
+      title="Clicky Game"
+      // Need links to logic that will update score with each click, high score
+      score="0"
+      topScore="0"
+      rightWrong="right wrong alert"
+    />
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
         <h1 className="display-4">Clicky Game!</h1>
