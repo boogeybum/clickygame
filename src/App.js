@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FriendCard from "./components/FriendCard";
-import Nav from './components/Nav';
-
+import Nav from "./components/Nav";
+import Wrapper from "./components/Wrapper";
 import friends from "./friends.json";
 import './App.css';
 
@@ -62,7 +62,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <Wrapper>
     {/* navbar location that includes the game reset link to the title, and the score that updates with each click and shows the high score */}
     <Nav
       title="Clicky Game"
@@ -97,7 +97,7 @@ class App extends Component {
         ))}
       </div>
     </div>
-    </>
+    </Wrapper>
     );
   }
 }
