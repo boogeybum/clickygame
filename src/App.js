@@ -3,6 +3,9 @@ import FriendCard from "./components/FriendCard";
 import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Container from "./Container";
+import Row from "./Row";
+import Column from "./Column";
 import friends from "./friends.json";
 import './App.css';
 
@@ -26,7 +29,7 @@ class App extends Component {
   handleClick = id => {
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
-      this.setState({ clicked: this.setState.clicked.concat(id) })
+      this.setState({ clicked: this.state.clicked.concat(id) })
     } else {
       this.handleReset();
     }
@@ -79,10 +82,10 @@ class App extends Component {
 
 
     {/* display all friends pictures */}
-    <div className="container">
-      <div className="row">
+    <Container>
+      <Row>
         {this.state.friends.map(friend => (
-          <div className="col-md-3 col-sm-6">
+          <Column size="md-3 sm-6">
             <FriendCard
               key={friend.id}
               handleClick={this.handleClick}
@@ -92,10 +95,10 @@ class App extends Component {
               id={friend.id}
               image={friend.image}
               />
-          </div>
+          </Column>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Container>
     </Wrapper>
     );
   }
