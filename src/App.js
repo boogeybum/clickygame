@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FriendCard from "./components/FriendCard";
 import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
 import friends from "./friends.json";
 import './App.css';
 
@@ -72,12 +73,9 @@ class App extends Component {
       rightWrong={this.state.rightWrong}
     />
 
-    <div className="jumbotron jumbotron-fluid">
-      <div className="container">
-        <h1 className="display-4">Clicky Game!</h1>
-        <p className="lead">Click on an image to earn points, but don't click on any more than once!</p>
-      </div>
-    </div>
+    <Title>
+        Click on an image to earn points, but don't click on any more than once!
+    </Title>
 
 
     {/* display all friends pictures */}
